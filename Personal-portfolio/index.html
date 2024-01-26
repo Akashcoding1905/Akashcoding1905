@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b2dcd1464d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header"data="Home">Home</a></li>
+                    <li><a href="#about"data="About">About</a></li>
+                    <li><a href="#Contact"data="Contact">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hello I'm</h1>
+                <h2><span>Akash B S</span></h2>
+                <p> Web developer</p>
+                <div class="img">
+                    <div class="photo">
+                        <img src="image/image.jpeg" class="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------about------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/profile.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Hello! I'm Akash, an aspiring web developer driven by a profound passion for technology. 
+                        Having recently graduated with a degree in Computer Science Engineering, 
+                        I possess a solid foundation in key web technologies such as HTML, CSS, JavaScript, and Python.
+                         My journey in web development is marked by an unwavering commitment to continuous learning and professional growth.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Language </span><br>HTML<br>CSS<br>Python</li>
+                            <li><span>Project</span><br>Personal Portfolio</li>
+                            <li><span>Certificate</span><br>Python in Guvi</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Higher Education <br>2019</span><br>Sundar Matriculation Higher Secondary School<br> 10th(State Board)<br></li>
+                            <li><span>2021</span><br>Sundar Matriculation Higher Secondary School<br> 12th(State Board)<br></li>
+                            <li><span>2021-Current</span><br>Pursuing a degree in Computer Science Engineering <br>
+                                at S.A. Engineering College</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <!----------------Contact----------->
+     <div id="Contact">
+        <div class="contact">
+            <div class="row">
+            <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>    
+                <p><i class="fa-solid fa-envelope"></i>akash190504@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>8825992014</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/akash-b-s-30b4b6264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100042285042327&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/invites/contact/?i=oh4nc1povvju&utm_content=fl3d2wn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Akashcoding1905/Akashcoding1905.git"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="image/Resume.pdf" download class="button">Download</a>
+            </div>
+            <div classs="contact-right"></div>
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="button">Submit</button>
+            </form>
+            <span id="msg">hello</span>
+          </div>
+        </div>
+        <div class="copyright">
+            <p><center>Copyright @ Created by Akash.</center></p>
+        </div>
+        </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwOLXPj61oOL7LYy_OVvMp-vW_B5C-ySetfeHd9TQAPBHZv2KN_70P3K20tPvw6-uqF/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                    msg.innerHtml="message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML= ""
+                    })
+                },5000)
+                form.reset()
+
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
