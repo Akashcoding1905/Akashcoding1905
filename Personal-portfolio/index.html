@@ -15,62 +15,168 @@
                 <ul>
                     <li><a href="#header"data="Home">Home</a></li>
                     <li><a href="#about"data="About">About</a></li>
-                    <li><a href="#Contact"data="Contact">Contact</a></li>
-                    
+                    <li><a href="#Courses"data="Courses">Courses</a></li>
+                    <li><a href="#Project"data="Project">Project</a></li>
+                    <li><a href="#Contact"data="Contact">Contact</a></li>  
                 </ul>
             </nav>
             <div class="header-text">
                 <h1>Hello I'm</h1>
                 <h2><span>Akash B S</span></h2>
-                <p> Web developer</p>
-                <div class="img">
-                    <div class="photo">
-                        <img src="image/image.jpeg" class="image">
-                    </div>
+                <p><span class="typing"></span></p>
                 </div>
             </div>
+        </div>
+    
+    
+    <div class="img">
+        <div class="photo">
+            <img src="image/image.jpeg" class="image">
         </div>
     </div>
     <!--------about------->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="image/profile.jpg">
+    <div id="about" class="about-container">
+    <div class="row">
+      <div class="about-col-1">
+          <img src="image/profile.jpg" alt="Profile Picture">
+      </div>
+      <div class="about-col-2">
+          <div class="about-content">
+              <h1 class="sub-title">About Me</h1>
+              <p>
+                  Hello! I'm Akash, an aspiring web developer driven by a profound passion for technology. 
+                  Having recently graduated with a degree in Computer Science Engineering, 
+                  I possess a solid foundation in key web technologies such as HTML, CSS, JavaScript, and Python.
+                  My journey in web development is marked by an unwavering commitment to continuous learning and professional growth.
+              </p>
+              <div class="tab-contents" id="education">
+                  <div class="content">
+                      <h4>EDUCATION </h4>
+                  </div>
+                  <ul>
+                      <li>
+                          <span>Higher Education</span> <br>
+                          10th (State Board) - 2019<br>
+                          Sundar Matriculation Higher Secondary School<br>
+                          12th (State Board) - 2021<br>
+                          Sundar Matriculation Higher Secondary School<br>
+                          <span>2021-Current</span><br>
+                          Pursuing a degree in Computer Science Engineering at S.A. Engineering College
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!----skills----->
+    <h1 class="title">SKILLS</h1>
+    <div class="skills-container">
+        <div class="left-box">
+            <div class="skill-box">
+                <h2 class="experience-sub-title">Frontend Development</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="skills/html2.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>HTML</h3>
+                        
+                        </div>
+                    </article>
+                    <article>
+                        <img src="skills/css.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>CSS</h3>
+                            
+                        </div>
+                    </article>
+                    <article>
+                        <img src="skills/js.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>JavaScript</h3>
+                           
+                        </div>
+                    </article>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>
-                        Hello! I'm Akash, an aspiring web developer driven by a profound passion for technology. 
-                        Having recently graduated with a degree in Computer Science Engineering, 
-                        I possess a solid foundation in key web technologies such as HTML, CSS, JavaScript, and Python.
-                         My journey in web development is marked by an unwavering commitment to continuous learning and professional growth.
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links"onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Programming Language </span><br>HTML<br>CSS<br>Python</li>
-                            <li><span>Project</span><br>Personal Portfolio</li>
-                            <li><span>Certificate</span><br>Python in Guvi</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Higher Education <br>2019</span><br>Sundar Matriculation Higher Secondary School<br> 10th(State Board)<br></li>
-                            <li><span>2021</span><br>Sundar Matriculation Higher Secondary School<br> 12th(State Board)<br></li>
-                            <li><span>2021-Current</span><br>Pursuing a degree in Computer Science Engineering <br>
-                                at S.A. Engineering College</li>
-                        </ul>
-                    </div>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="skill-box">
+                <h2 class="experience-sub-title">Programming Languages</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="skills/c.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>C</h3>
+                            
+                        </div>
+                    </article>
+                    <article>
+                        <img src="skills/c++.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>C++</h3>
+                            
+                        </div>
+                    </article>
+                    <article>
+                        <img src="skills/python.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Python</h3>   
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
     </div>
-    
-     <!----------------Contact----------->
+    <!-- Inside the Courses section -->
+<div id="Courses">
+    <div class="container">
+        <h1 class="Courses">Courses</h1>
+        <div class="course-content">
+            <div class="course-item">
+                <img src="courses/python programming infosys.jpg" alt="Course 1 Image">
+                <h2>Python Infosys</h2>
+                <!--<p>Description of the first course goes here.</p>-->
+            </div>
+            <div class="course-item">
+                <img src="courses/java intoduction infosys.jpg" alt="Course 2 Image">
+                <h2>Java Infosys</h2>
+                <!--<p>Description of the second course goes here.</p>-->
+            </div>
+            <div class="course-item">
+                <img src="courses/web udemy.jpg" alt="Course 3 Image">
+                <h2>Web development</h2>
+                <!--<p>Description of the third course goes here.</p>-->
+            </div>
+          </div>     
+    </div>
+</div>
+    <!-------Project---------->
+<div id="Project">
+    <div class="container">
+        <h1 class="Project">Projects</h1>
+        <div class="project-content">
+            <div class="project-item">
+                <img src="project/guess number.jpeg" alt="Project 1 Image">
+                <h2>Project Title 1</h2>
+                <a href="https://github.com/akash-b-s/number-guess-game" class="project-link">Learn More</a>
+            </div>
+            <div class="project-item">
+                <img src="project/p2.jpg" alt="Project 2 Image">
+                <h2>Mario Python Pygame</h2>
+                <p></p>
+                <a href="https://github.com/akash-b-s/Python-pygame" class="project-link">Learn More</a>
+            </div>
+            <div class="project-item">
+                <img src="project/p3.png" alt="Project 3 Image">
+                <h2>Food Donation Application-ongoing</h2>
+                
+                <a href="https://example.com/project3" class="project-link">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------Contact----------->
      <div id="Contact">
         <div class="contact">
             <div class="row">
@@ -93,27 +199,14 @@
                 <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                 <button type="submit" class="button">Submit</button>
             </form>
-            <span id="msg">hello</span>
+            <span id="msg"></span>
           </div>
         </div>
         <div class="copyright">
             <p><center>Copyright @ Created by Akash.</center></p>
         </div>
         </div>
-    <script>
-        var tablinks=document.getElementsByClassName("tab-links");
-        var tabcontents=document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
+   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwOLXPj61oOL7LYy_OVvMp-vW_B5C-ySetfeHd9TQAPBHZv2KN_70P3K20tPvw6-uqF/exec'
         const form = document.forms['submit-to-google-sheet']
@@ -131,6 +224,13 @@
 
             .catch(error => console.error('Error!', error.message))
         })
+        var typed=new Typed(".typing",{
+            strings: ["Web development","UI/UX Design","Cloud Computing"],
+            typeSpeed:150,
+            backSpeed:150,
+            loop:true
+        })
+        
       </script>
 </body>
 </html>
