@@ -7,6 +7,15 @@
 html{
     scroll-behavior: smooth;
 }
+html, body {
+    overflow-x: hidden; 
+    height: 100%; 
+}
+#header {
+    width: 100%;
+    min-height: 100vh; 
+    overflow: hidden; 
+}
 
 body{
     background: #080808;
@@ -44,7 +53,7 @@ body{
 
 }
 .header-text p span{
-    color: rgb(38, 88, 196);
+    color: rgb(170, 38, 196);
     font-size: 60px;
     width: auto;
 }
@@ -408,6 +417,7 @@ form button{
 .course-item img {
     width: 100%; 
     max-width: 300px; 
+    max-height: 200px;
     border-radius: 10px; 
 }
 
@@ -441,6 +451,7 @@ form button{
 .project-item img {
     width: 100%; 
     max-width: 300px; 
+    max-height: 200px;
     border-radius: 10px; 
 }
 
@@ -567,6 +578,6 @@ form button{
 }
 @media screen and (max-width: 768px) {
     .about-col-1 {
-        display: none; /* Hide the image column on smaller screens */
+        display: none; 
     }
 }
